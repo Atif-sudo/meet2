@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <title>Welcome to Home Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Including the bootstrap CDN -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">    </script>
+    <script src="validation.js"></script>
+    <script src="code.js">    </script>
+
+</head>
+
+<body>
+
+<!-- Creating a navigation bar using the
+     .navbar class of bootstrap -->
+<nav class="navbar navbar-expand-sm bg-light">
+    <img class="headerlogo" src="Images/logo.png" alt="logo">
+    <h2 class="video">Video Chat </h2>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                Features
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                Contact
+            </a>
+        </li>
+        <div class="header_button">
+            <button type="button" class="btn btn-lightgreen" onclick="openLoginForm()">Login</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <button type="button" class="btn btn-dark" onclick="openSignupForm()">Sign Up</button>
+        </div>
+    </ul>
+</nav>
+
+
+
+
+
+
+<section>
+    <div class="bodypart">
+        <h2 style="font-family: 'Courier New', Courier, monospace;"><b>Remote Connection with your team</b></h2>
+        <h4 style="font-family: 'Courier New', Courier, monospace;">Work together in ways that go beyond with easy video from anywhere.</h4><br><br>
+
+
+    </div>
+
+</section>
+
+
+<section id="slider">
+    <div class="container">
+        <div class="row mt-5 mb-3">
+            <div class="col-md-6">
+                <div id="carouselSlidesOnly" class="carouselslide" data-ride="carousel">
+
+
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="Images/Chatting-rafiki.png" alt="Third slide">
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100" src="Images/Video call-amico.png" alt="Fourth slide">
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100" src="Images/Video call-bro.png" alt="Fifth slide">
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100" src="Images/Video call-cuate.png" alt="Sixth slide">
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100" src="Images/Video call-pana.png" alt="Seventh slide">
+                    </div>
+                    <div class="carousel-item ">
+                        <img class="d-block w-100" src="Images/Video call-rafiki.png" alt="Eighth slide">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 square d-flex justify-content-center align-text-center">
+                <div class="scroll-bg">
+                    <div class="scroll-div">
+                        <div class="scroll-object">
+
+                            <h1 style="text-align: center; color: #000000; font-family: 'Courier New', Courier, monospace" > <b>Features</b> </h1>
+
+                        </div>
+                        <button class="accordion"><b>Screen Sharing</b></button>
+                        <div class="panel">
+                            <p style="font-family: 'Courier New', Courier, monospace; color: #000000">For interactive meetings and webinars, screen sharing is vital. You want to be able to share
+                                your entire screen as well as individual apps on your desktop during a meeting. This makes
+                                it easier for your video conference participants to follow what the presenter is explaining.</p>
+                        </div>
+
+                        <button class="accordion"><b>Sign-up & Login</b></button>
+                        <div class="panel">
+                            <p style="font-family: 'Courier New', Courier, monospace; color: #000000">To create an account, users need to sign up for your platform. Integrate your app with Google
+                                so users can sign up using their favorite social network. When setting up a profile, you can allow users
+                                to provide personal information that can be useful later when browsing and using the platform.</p>
+                        </div>
+
+                        <button class="accordion"><b>Video & voice calls</b></button>
+                        <div class="panel">
+                            <p style="font-family: 'Courier New', Courier, monospace; color: #000000">This is the main functionality of anyonline video chat application. Users should
+                                be able to make one-on-one calls as well as group calls. The latter have been quite
+                                popular in remote work environments where conference calls are the norm. Global
+                                Newswiresays 25% of 18-29 year olds use video calls for work every day.Another statisticsshow
+                                that 81% of employees think their employer will support remote work environments after the
+                                coronavirus pandemic, making conference calls the norm.
+                                    <br>
+                                Therefore, make sure audio is clear and loud and video is of high quality. After all,
+                                who will want to use your platform if it doesn’t provide high-quality audio and video?</p>
+                        </div>
+
+                        <button class="accordion"><b>Chat Features</b></button>
+                        <div class="panel">
+                            <p style="font-family: 'Courier New', Courier, monospace; color: #000000">Whether you’re broadcasting to a group of leads with a marketing webinar or holding a meeting
+                                with employees, your users will get more out of the experience if they can interact. This is
+                                why a robust chat feature is so useful. Look for chat capabilities that allow your video
+                                conference users to share messages, including text and emojis, during a meeting or online
+                                event.</p>
+                        </div>
+
+                        <button class="accordion"><b>HD Video</b></button>
+                        <div class="panel">
+                            <p style="font-family: 'Courier New', Courier, monospace; color: #000000">For an even better meeting experience, HD video can make a huge difference. With high-quality
+                                video, everyone can clearly see who’s speaking, making it feel like everyone is right there
+                                in the same room.</p>
+                        </div>
+
+                        <button class="accordion"><b>Presence status</b></button>
+                        <div class="panel">
+                            <p style="font-family: 'Courier New', Courier, monospace; color: #000000">Your application should also feature presence statuses. Let users indicate whether they’re
+                                away or available. You can also include such statuses as active, or left.</p>
+                        </div>
+
+                        <button class="accordion"><b>Browser Support </b></button>
+                        <div class="panel">
+                            <p style="font-family: 'Courier New', Courier, monospace; color: #000000">Make HD 1-to-1 or group video calls compatible across the latest versions of Chrome,
+                                Firefox and Opera. </p>
+                        </div>
+
+                        <button class="accordion"><b>Gaming</b></button>
+                        <div class="panel">
+                            <p style="font-family: 'Courier New', Courier, monospace; color: #000000">Gaming refers to playing electronic games, whether through consoles, computers, mobile phones
+                                or another medium altogether. Gaming is a nuanced term that suggests regular gameplay,
+                                possibly as a hobby. Although traditionally a solitary form of relaxation, online multiplayer
+                                video games have made gaming a popular group activity as well.</p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-----------------------------login popup-------------------------------------------->
+
+<div class="form-popup " id="login">
+    <div class="form-container p-3">
+        <h1 class="text-center">Welcome</h1>
+
+        <label for="login-email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" id="login-email" required>
+
+        <label for="login-password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="login-password" required>
+
+        <div class="phone1" id="login-error"><b></b></div>
+
+        <button type="submit" class="btn" onclick="submitLoginForm()">Login</button>
+        <button type="button" class="btn cancel" onclick="closeLoginForm()">Close</button>
+
+
+    </div>
+</div>
+
+
+<div class="form-popup" id="signup" >
+    <div  class="form-container p-4">
+        <h1 class="text-center">Registration</h1>
+
+        <label for="signup-username"><b>Full Name</b></label>
+        <input type="text" placeholder="Enter your Name" id="signup-username" required> <br>
+
+        <label for="signup-email"><b>Email</b></label>
+        <input type="text" placeholder="Enter your Email" id="signup-email" required>
+
+        <label for="signup-password"><b>Password</b></label>
+        <input type="password" placeholder="Enter your Password" id="signup-password"  required>
+
+
+        <div class="phone" id="signup-error"><b></b></div>
+
+        <button type="submit" class="btn" onclick="submitSignupForm()">SignUp</button>
+        <button type="button" class="btn cancel" onclick="closeSignupForm()">Close</button>
+    </div>
+</div>
+
+
+
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            /* Toggle between adding and removing the "active" class,
+            to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+
+</script>
+</body>
+
+</html>

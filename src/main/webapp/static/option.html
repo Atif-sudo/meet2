@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Choose Option</title>
+    <!-- Including the bootstrap CDN -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">    </script>
+    <script src="validation.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link href="code.js">
+</head>
+<body>
+
+
+<!-- Creating a navigation bar using the
+     .navbar class of bootstrap -->
+<nav class="navbar navbar-expand-sm bg-light">
+    <img class="headerlogo" src="Images/logo.png" alt="logo">
+    <h2 class="video">Video Chat </h2>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                Features
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                Contact
+            </a>
+        </li>
+        <div class="header_button">
+            <button type="button" class="btn btn-lightgreen" onclick="openLoginForm()">Login</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <button type="button" class="btn btn-dark" onclick="openSignupForm()">Sign Up</button>
+        </div>
+    </ul>
+</nav>
+
+<div class="container1">
+    <div class="box">
+        <div class="icon"><i class="fa fa-filter" aria-hidden="true"></i></div>
+        <div class="content">
+            <h3>CHOOSE OPTION</h3>
+            <p>djsfksfjskdhflsfjhsdhflsdjfhlsdfsljfhlsdhflsdflh</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="icon"><i class="fa fa-gamepad" aria-hidden="true"></i></div>
+        <div class="content">
+            <h3><a href="gaming.html" target="_blank" >GAMING</a>  </h3>
+            <p>djsfksfjskdhflsfjhsdhflsdjfhlsdfsljfhlsdhflsdflh</p>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="icon"><i class="fa fa-meetup" aria-hidden="true"></i></div>
+        <div class="content">
+            <h3> <a href="meeting.html" target="_blank">MEETING</a></h3>
+            <p>djsfksfjskdhflsfjhsdhflsdjfhlsdfsljfhlsdhflsdflh</p>
+        </div>
+    </div>
+
+</div>
+
+
+<!-----------------------------login popup-------------------------------------------->
+
+
+<div class="form-popup " id="login">
+    <div class="form-container p-3">
+        <h1 class="text-center">Welcome</h1>
+
+        <label for="login-email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" id="login-email" required>
+
+        <label for="login-password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" id="login-password" required>
+
+        <div class="phone1" id="login-error"><b></b></div>
+
+        <button type="submit" class="btn" onclick="submitLoginForm()">Login</button>
+        <button type="button" class="btn cancel" onclick="closeLoginForm()">Close</button>
+
+
+    </div>
+</div>
+
+
+<div class="form-popup" id="signup" >
+    <div  class="form-container p-4">
+        <h1 class="text-center">Registration</h1>
+
+        <label for="signup-username"><b>Full Name</b></label>
+        <input type="text" placeholder="Enter your Name" id="signup-username" required> <br>
+
+        <label for="signup-email"><b>Email</b></label>
+        <input type="text" placeholder="Enter your Email" id="signup-email" required>
+
+        <label for="signup-password"><b>Password</b></label>
+        <input type="password" placeholder="Enter your Password" id="signup-password"  required>
+
+
+        <div class="phone" id="signup-error"><b></b></div>
+
+        <button type="submit" class="btn" onclick="submitSignupForm()">SignUp</button>
+        <button type="button" class="btn cancel" onclick="closeSignupForm()">Close</button>
+    </div>
+</div>
+</body>
+</html>
