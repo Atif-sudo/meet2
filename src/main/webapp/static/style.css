@@ -261,6 +261,7 @@ img
   box-sizing: border-box;
   transition: 0.5s;
   opacity: 0;
+
 }
 .container1 .box:hover .content
 {
@@ -301,7 +302,7 @@ img
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
-  background-color: #99ffd6;
+  background-color: #eeeeee;
 }
 
 /* Style the accordion panel. Note: hidden by default */
