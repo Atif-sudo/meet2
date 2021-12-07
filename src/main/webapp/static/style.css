@@ -98,7 +98,7 @@ img
 .scroll-div
 {
   margin-top: 5px;
-  width: 550px;
+  /*width: 550px;*/
   height: 500px;
   overflow:hidden;
   overflow-y: scroll;
@@ -111,7 +111,7 @@ img
   font-family: 'Courier New', Courier, monospace;
 }
 
-<!---------------------------------->
+
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
@@ -192,96 +192,337 @@ img
 
 /*------------------Option.html--------------*/
 
-.container1
-{
+.btn-div{
+  margin-left: 150px;
+  margin-top: 150px;
 
-  position: relative;
-  width: 1200px;
-  height: 300px;
-  margin: 70px auto;
+
+  font-family: 'Courier New', Courier, monospace;
+}
+#room-id{
+  margin-left: 5px;
+
+  font-family: 'Courier New', Courier, monospace;
+}
+.btn-div1{
+  height: 450px;
+  width: 500px;
+  margin-left: 80px;
+  margin-top: 50px;
 }
 
-.container1 .box
-{
+/*sdjhfisdhfjlksdhfjsdjkf*/
+#meeting{
   position: relative;
-  width: calc(400px - 30px);
-  height: calc(300px - 30px);
-  background: #000000;
-  float: left;
-  margin: 15px;
-  box-sizing: border-box;
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  background-color: #222;
   overflow: hidden;
-  border-radius: 10px;
 }
-
-.container1 .box .icon
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: calc(400px - 30px);
-  height: calc(300px - 30px);
-  background: #99ffd6;
-  transition: 0.5s;
-  z-index: 1;
-}
-
-.container1 .box:hover .icon
-{
-  top: 20px;
-  left: calc(50% - 40px);
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-}
-
-.container1 .box .icon .fa
-{
+#show-msg{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  font-size: 80px;
-  color: gray;
-}
-
-.container1 .box:hover .icon .fa
-{
-  font-size: 40px;
-
-}
-
-.container1 .box .content
-{
-  position: absolute;
-  top: 100%;
-  height: calc(100% - 100px);
+  width: 100vw;
   text-align: center;
+  z-index: 11;
+  color: #fff;
+}
+#copy-meeting-id{
+  display: flex;
+}
+#meeting-id{
+  width: 80px;
+  height: 30px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  background: #fff5;
+  color: #fff;
+  outline: none;
+}
+.copy-meeting-id button i{
+  color:#fff;
+  font-size: 20px;
+}
+#navbar{
+  height: 70px;
+  box-shadow: 5px 0px 10px 0 rgba(0,0,0,0.2);
+}
+#main{
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.cover{
+  flex: 4;
+}
+.hero{
+  flex: 3;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.hero h1{
+  text-align: center;
+}
+.hero p{
+  color: #6a6e74;
+  text-align: center;
+}
+.cover img{
+  width: 100%;
+  height: 100%;
+}
+.btn{
+  color: #fff;
+  background: #6884CD;
+  padding: 2px 16px 0px 12px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-weight: 500;
+  line-height: 35px;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.4);
+}
+button:hover{
+  cursor: pointer;
+}
+input[type="text"]{
+  padding-left: 20px;
+  height: 36px;
+  line-height: 24px;
+  border-radius: 4px;
+  border:1px solid #dadce0;
+}
+#create-room{
+  min-width: 150px;
+  margin: 20px;
+}
+#create-room svg{
+  position: relative;
+  top: 6px;
+  height: 22px;
+  width: 22px;
+  fill: #fff;
+  padding-right: 5px;
+}
+.btn-div{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.join{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer{
+
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer p{
+  text-align: center;
+}
+footer .social-icon a{
+  margin: 10px;
+}
+footer .social-icon a i{
+  color: #6884CD;
+  font-size: 35px;
+}
+.fa-heart{
+  color:red;
+}
+footer p:nth-child(3){
+  margin:0;
+  margin-bottom: 10px;
+}
+
+#self-video{
+  overflow: hidden;
+  border-radius: 5px;
+  position: absolute;
+  top:0;
+  left: 0;
+  min-width: 120px;
+  width: 150px;
+  max-width: 200px;
+  min-height: 120px;
+  height: 150px;
+  max-height: 200px;
+  z-index: 10;
+  object-fit: contain !important;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+}
+#remote-video{
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100vh;
+  width: 100vw;
+  object-fit: contain!important;
+}
+button{
+  background: transparent;
+  border: none;
+}
+.call-button{
+  position: absolute;
+  bottom: 20px;
+  left:50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+.call-button i{
+  margin: 10px;
   padding: 20px;
-  box-sizing: border-box;
-  transition: 0.5s;
-  opacity: 0;
-}
-.container1 .box:hover .content
-{
-  top: 100px;
-  opacity: 1;
-}
-
-.container1 .box .content h3
-{
-  margin: 0 0 10px;
-  padding: 0;
-  color: #fff;
-
-}
-
-.container1 .box .content p
-{
-  margin: 0;
-  padding: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #fffc;
   color: #fff;
 }
+.call-button button:nth-child(3) i{
+  background: red;
+  color:#fff;
+  border: none;
+}
+.call-button a img{
+  width: 32px;
+}
+
+
+@keyframes fade-in{
+  0%{ opacity: 0;}
+  100%{opacity: 1;}
+}
+@keyframes fade-out{
+  0%{ opacity: 1;}
+  100%{opacity: 0;}
+}
+.fadeout{
+  animation: fade-out 1s forwards;
+}
+.chat-container{
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 450px;
+  width: 300px;
+  background: #EDF0F5;
+  border-radius: 10px;
+  animation: fade-in 1s forwards;
+  z-index: 12;
+}
+.chat-wrapper{
+  height: 350px;
+  padding: 0px 20px;
+  overflow-y: scroll;
+}
+.chat-header{
+  font-size: 18px;
+  box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.1);
+  margin:0;
+  padding:10px;
+}
+.remote-msg span{
+  color: #222;
+  text-align: left;
+  background: #fff;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+}
+.self-msg{
+  text-align: right;
+}
+.self-msg span{
+  display: inline-block;
+  color: #222;
+  text-align: right;
+  background: #D0D3E3;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border-bottom-right-radius: 0px;
+  display: inline-block;
+}
+.remote-msg span,.self-msg span{
+  color: #222;
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
+}
+.msg-btn{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.send-msg{
+  background: #6884CD;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+.send-msg i{
+  color: #fff;
+}
+.msg{
+  border: none;
+}
+input[type="text"]{
+  border: none;
+  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2)
+}
+input[type="text"]:focus{
+  border: none;
+  outline: none;
+}
+
+
+@media screen and (max-width:800px){
+  #main{
+    display: block;
+  }
+  .hero{
+    flex: 3;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width:550px){
+  .chat-container{
+    top: 10%;
+    transform: translateY(-10%);
+  }
+
+  .call-button i{
+    margin: 5px;
+    padding: 15px;
+  }
+  #self-video{
+    min-width: 80px;
+    width: 100px;
+    max-width: 140px;
+    min-height: 80px;
+    height: 100px;
+    max-height: 140px;
+
+  }
+}
+
+
 
 
 
@@ -301,7 +542,7 @@ img
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
-  background-color: #99ffd6;
+  background-color: #eeeeee;
 }
 
 /* Style the accordion panel. Note: hidden by default */
@@ -311,3 +552,6 @@ img
   display: none;
   overflow: hidden;
 }
+
+/*---------------------meet.html--------------------------*/
+
