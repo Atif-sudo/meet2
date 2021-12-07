@@ -18,6 +18,7 @@ public class EventController {
     private final Map<String, List<String>> roomUserMap;
     private final Map<String, String> userIdRoomMap;
     private final Map<String, List<WebsocketSRO>> userEventMap;
+    private final Map<String, String> roomOwnerMap;
     private static final Object lock = new Object();
     private static final Gson gson = new Gson();
 
@@ -29,8 +30,22 @@ public class EventController {
         userEventMap = new HashMap<>();
         roomUserMap = new HashMap<>();
         userIdRoomMap = new HashMap<>();
+        roomOwnerMap = new HashMap<>();
     }
 
+    @RequestMapping("/new_room")
+    @ResponseBody
+    public String newRoom(){
+        String roomId = UUID.randomUUID().toString().substring(0, 10);
+        while(roomOwnerMap.containsKey(roomId)){
+            roomId = UUID.randomUUID().toString().substring(0, 10);
+        }
+        roomOwnerMap.put(roomId, null);
+        Map<String, Object> result = new HashMap<>();
+        result.put("room_id", roomId);
+        return gson.toJson(result);
+
+    }
 
     @RequestMapping("/init")
     @ResponseBody
@@ -41,6 +56,7 @@ public class EventController {
         if (!roomUserMap.containsKey(roomId)) {
             List<String> userIds = new ArrayList<>();
             roomUserMap.put(roomId, userIds);
+            roomOwnerMap.put(roomId, userId);
         }
         roomUserMap.get(roomId).add(userId);
 

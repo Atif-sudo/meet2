@@ -21,7 +21,7 @@ function newWebsocketManager(room){
    
     websocketManger.start = function(){
         var hostname = document.location.hostname;
-        websocketManger.websocket = new WebSocket("ws://"+hostname+":8080/api/rtc_transport?room=" + room);
+        websocketManger.websocket = new WebSocket("wss://"+hostname+":8080/api/rtc_transport?room=" + room);
         websocketManger.websocket.onmessage = function (ev) {
             var message = ev.data;
             var msg = JSON.parse(message);

@@ -2,17 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Choose Option</title>
     <!-- Including the bootstrap CDN -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="validation.js"></script>
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="code.js">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="websocket_manager.js"></script>
+    <script src="rtc_apis.js"></script>
+    <script src="common.js"></script>
+    <script src="api_broker.js"></script>
+    <script src="style.css"></script>
 </head>
 <body>
 
@@ -23,96 +31,131 @@
     <img class="headerlogo" src="Images/logo.png" alt="logo">
     <h2 class="video">Video Chat </h2>
     <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-            <a class="nav-link" href="#">
-                Features
-            </a>
-        </li>
 
-        <li class="nav-item">
-            <a class="nav-link" href="#">
-                Contact
-            </a>
-        </li>
         <div class="header_button">
-            <button type="button" class="btn btn-lightgreen" onclick="openLoginForm()">Login</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-            <button type="button" class="btn btn-dark" onclick="openSignupForm()">Sign Up</button>
+            <button type="button" class="btn btn-lightgreen" onclick="">Log Out</button>
         </div>
+
+
     </ul>
 </nav>
 
-<div class="container1">
-    <div class="box">
-        <div class="icon"><i class="fa fa-filter" aria-hidden="true"></i></div>
-        <div class="content">
-            <h3>CHOOSE OPTION</h3>
-            <p>You have options for gaming and meeting.</p>
-            <p>Click on the next given options.  </p>>
+
+<section id="divide">
+    <div class="container1">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="btn-div">
+                    <p><h4><b>Remote Connection with your team</b></h4></p>
+                    <h6>Work together in ways that go beyond with easy video from anywhere.</h6><br><br><br>
+                    <button class="btn btn-lightgreen" id="create-room" onclick="createRoom()">
+
+                        <span>
+                            <svg height="10pt" viewBox="0 -87 472 472" width="20pt" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m467.101562 26.527344c-3.039062-1.800782-6.796874-1.871094-9.898437-.179688l-108.296875
+                            59.132813v-35.480469c-.03125-27.601562-22.398438-49.96875-50-50h-248.90625c-27.601562.03125-49.96875 22.398438-50
+                             50v197.421875c.03125 27.601563 22.398438 49.96875 50 50h248.90625c27.601562-.03125 49.96875-22.398437
+                             50-50v-34.835937l108.300781 59.132812c3.097657 1.691406 6.859375 1.625 9.894531-.175781 3.039063-1.804688
+                             4.898438-5.074219 4.898438-8.601563v-227.816406c0-3.53125-1.863281-6.796875-4.898438-8.597656zm-138.203124
+                             220.898437c-.015626 16.5625-13.4375 29.980469-30 30h-248.898438c-16.5625-.019531-29.980469-13.4375-30-30v-197.425781c.019531-16.558594 13.4375-29.980469
+                             30-30h248.90625c16.558594.019531 29.980469 13.441406 30 30zm123.101562-1.335937-103.09375-56.289063v-81.535156l103.09375-56.285156zm0 0"/>
+                            </svg>
+                        </span>
+                        Create room
+                    </button>
+                    <br><br>
+                    <div class="join">
+                        <input type="text" name="room-id" id="room-id" placeholder="Enter meeting code">
+                        <button class="btn btn-dark" id="join-room">Join <span> </span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="btn-div1">
+                        <div id="carouselSlidesOnly" class="carouselslide" data-ride="carousel">
+
+
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="Images/Chatting-rafiki.png" alt="Third slide">
+                            </div>
+                            <div class="carousel-item ">
+                                <img class="d-block w-100" src="Images/Video call-amico.png" alt="Fourth slide">
+                            </div>
+                            <div class="carousel-item ">
+                                <img class="d-block w-100" src="Images/Video call-bro.png" alt="Fifth slide">
+                            </div>
+                            <div class="carousel-item ">
+                                <img class="d-block w-100" src="Images/Video call-cuate.png" alt="Sixth slide">
+                            </div>
+                            <div class="carousel-item ">
+                                <img class="d-block w-100" src="Images/Video call-pana.png" alt="Seventh slide">
+                            </div>
+                            <div class="carousel-item ">
+                                <img class="d-block w-100" src="Images/Video call-rafiki.png" alt="Eighth slide">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
+</section>
 
-    <div class="box">
-        <div class="icon"><i class="fa fa-gamepad" aria-hidden="true"></i></div>
-        <div class="content">
-            <h3><a href="gaming.html" target="_blank" >GAMING</a>  </h3>
-            <p>djsfksfjskdhflsfjhsdhflsdjfhlsdfsljfhlsdhflsdflh</p>
+<div id="meeting">
+    <div class="show-msg" id="show-msg">
+        <p>Waiting to join someone</p>
+        <p>Share the meeting code to join</p>
+
+        <div class="copy-meeting-id">
+            <input id="meeting-id" value="">
+            <button><i class="far fa-copy"></i></button>
         </div>
     </div>
+    <p id="coppied-msg"></p>
 
-    <div class="box">
-        <div class="icon"><i class="fa fa-meetup" aria-hidden="true"></i></div>
-        <div class="content">
-            <h3> <a href="meeting.html" target="_blank">MEETING</a></h3>
-            <p>djsfksfjskdhflsfjhsdhflsdjfhlsdfsljfhlsdhflsdflh</p>
+    <div class="">
+        <!--div class="receiver">
+            <video width="400" id="self-video">
+                <source src="" type="">
+            </video>
+        </div>
+
+        <div-- class="sender">
+            <video id="remote-video" width="500">
+                <source src="" type="">
+            </video>
+        </div-->
+        <div id="video-container"></div>
+        <div id="meeting-link-container">
+
+        </div>
+        <!-- <button class="open-chat" id="open-chat"><i class="fab fa-facebook-messenger"></i></button>
+    -->
+        <div class="chat-container" id="chat-container">
+            <h2 class="chat-header">Chat</h2>
+            <div class="chat-wrapper" id="chat">
+
+            </div>
+            <div class="msg-btn">
+                <input type="text" class="msg" id="msg" placeholder="Write your message">
+                <button class="send-msg" id="send-msg"><i class="fas fa-paper-plane"></i></button>
+            </div>
         </div>
     </div>
-
-</div>
-
-
-<!-----------------------------login popup-------------------------------------------->
-
-
-<div class="form-popup " id="login">
-    <div class="form-container p-3">
-        <h1 class="text-center">Welcome</h1>
-
-        <label for="login-email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email" id="login-email" required>
-
-        <label for="login-password"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" id="login-password" required>
-
-        <div class="phone1" id="login-error"><b></b></div>
-
-        <button type="submit" class="btn" onclick="submitLoginForm()">Login</button>
-        <button type="button" class="btn cancel" onclick="closeLoginForm()">Close</button>
-
-
+    <div class="call-button">
+        <button id="mute-audio"><i class="fas fa-microphone"></i></button>
+        <button id="mute-video"><i class="fas fa-video"></i></button>
+        <button id="call-end"><i class="fas fa-phone"></i></button>
+        <button id="share-screen"><i class="fas fa-desktop"></i></button>
+        <button class="open-chat" id="open-chat"><i class="fas fa-comment-alt"></i></i></button>
     </div>
 </div>
+<script src="https://kit.fontawesome.com/9b92be56de.js" crossorigin="anonymous"></script>
 
 
-<div class="form-popup" id="signup" >
-    <div  class="form-container p-4">
-        <h1 class="text-center">Registration</h1>
-
-        <label for="signup-username"><b>Full Name</b></label>
-        <input type="text" placeholder="Enter your Name" id="signup-username" required> <br>
-
-        <label for="signup-email"><b>Email</b></label>
-        <input type="text" placeholder="Enter your Email" id="signup-email" required>
-
-        <label for="signup-password"><b>Password</b></label>
-        <input type="password" placeholder="Enter your Password" id="signup-password"  required>
-
-
-        <div class="phone" id="signup-error"><b></b></div>
-
-        <button type="submit" class="btn" onclick="submitSignupForm()">SignUp</button>
-        <button type="button" class="btn cancel" onclick="closeSignupForm()">Close</button>
-    </div>
-</div>
 </body>
 </html>

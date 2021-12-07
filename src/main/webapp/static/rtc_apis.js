@@ -30,7 +30,7 @@ function startVideo(room){
 function startRTC(room) {
     
     
-    var websocketManager = new newWebsocketManager(room);
+    var websocketManager = new newAPIBroker(room);
     window.websocketManager = websocketManager;
 
 
@@ -89,7 +89,7 @@ function startRTC(room) {
                     });
             }
             remotePeerData.connected = true;
-            console.log("COnnected")
+            console.log("Connected")
             });
         }
 
@@ -169,6 +169,12 @@ function setupNewPeer(socketId){
             var videoHtml = "<video id=\"video-" + socketId + "\"></video >";
                 videoContainer.append(videoHtml);
             video = $("#video-" + socketId)[0];
+
+
+            var totalWidth = videoContainer.width;
+            var videoCount = videoContainer.find("video").length;
+            var videoWidth = totalWidth / Math.ceil( Math.sqrt(videoCount));
+            videoContainer.find("video").width(videoWidth);
         }
         if(!video.srcObject){
             video.srcObject = new MediaStream();
